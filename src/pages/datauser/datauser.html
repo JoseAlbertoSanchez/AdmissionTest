@@ -1,0 +1,30 @@
+<!--
+  Generated template for the DatauserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista de Datos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-content padding center text-center>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let data of dataBookings">
+        <ion-label>{{data.bookingId}}</ion-label>
+        <ion-label>{{data.firstName}}</ion-label>
+        <ion-label>{{data.lastName}}</ion-label>
+        <ion-label>{{data.bookingTime}}</ion-label>
+        <ion-label>{{data.streetAddress}}</ion-label>
+        <ion-label>{{data.bookingPrice}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
